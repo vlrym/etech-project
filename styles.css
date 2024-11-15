@@ -6,12 +6,6 @@ body {
     background-color: #f4f4f9;
     color: #333;
     transition: background-color 0.3s ease;
-    opacity: 0;
-    transition: opacity 1s ease-out;
-}
-
-body.fade-in {
-    opacity: 1;
 }
 
 /* Header Styles */
@@ -26,24 +20,16 @@ header h1 {
     font-size: 3rem;
 }
 
-header p {
-    font-size: 1.5rem;
-}
-
-header:hover h1 {
-    transform: translateY(-10px);
-}
-
 /* Navigation Bar */
 nav {
     background-color: #333;
     padding: 10px 0;
+    text-align: center;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
 }
 
 nav ul li {
@@ -65,24 +51,6 @@ nav ul li a:hover {
     padding-bottom: 10px;
 }
 
-nav ul li a::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #4CAF50;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-
-nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
 /* Main Section */
 main {
     padding: 40px 20px;
@@ -92,7 +60,7 @@ main {
 }
 
 /* Section Titles */
-main h2 {
+h2 {
     font-size: 2rem;
     margin-bottom: 15px;
     color: #4CAF50;
@@ -108,10 +76,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-}
-
-footer:hover {
-    background-color: #4CAF50;
 }
 
 /* Fade-in Animation */
@@ -141,22 +105,21 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Optional Section Styles */
+section {
+    padding: 60px;
+    margin-top: 50px;
+    border-bottom: 2px solid #ddd;
+}
+
 /* Mobile Styles */
 @media only screen and (max-width: 768px) {
-    /* Header */
     header h1 {
         font-size: 2rem;
     }
 
     header p {
         font-size: 1.2rem;
-    }
-
-    /* Navigation */
-    nav ul {
-        padding: 0;
-        text-align: center;
-        margin: 0;
     }
 
     nav ul li {
@@ -169,25 +132,13 @@ html {
         padding: 8px;
     }
 
-    /* Main Content */
-    main {
-        padding: 20px 10px;
-    }
-
-    /* Section Titles */
-    main h2 {
+    h2 {
         font-size: 1.8rem;
-    }
-
-    /* Footer */
-    footer {
-        padding: 15px 10px;
     }
 }
 
-/* Extra Small Mobile Styles (optional) */
+/* Extra Small Mobile Styles */
 @media only screen and (max-width: 480px) {
-    /* Adjust font sizes for small screens */
     header h1 {
         font-size: 1.8rem;
     }
@@ -201,7 +152,7 @@ html {
         padding: 5px;
     }
 
-    main h2 {
+    h2 {
         font-size: 1.5rem;
     }
 }
