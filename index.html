@@ -52,6 +52,32 @@
         </section>
     </main>
 
+<script>
+    // Page fade-in effect on load
+    window.addEventListener("load", function() {
+        document.body.classList.add("fade-in");
+    });
+
+    // CSS for fade-in animation
+    const style = document.createElement('style');
+    style.innerHTML = `
+        body.fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+</script>
+
+
     <footer>
         <p>Project by Edsan Sanchez</p>
     </footer>
