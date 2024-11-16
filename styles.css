@@ -272,7 +272,7 @@ body.dark-mode .interest-item {
 
 body.dark-mode .interest-item:hover {
     background: #555;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
 }
 
 body.dark-mode nav ul li a {
