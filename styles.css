@@ -231,3 +231,8 @@ footer p {
         padding: 15px;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
