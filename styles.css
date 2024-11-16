@@ -10,17 +10,17 @@ body {
 header {
     background: linear-gradient(135deg, rgba(108, 142, 212, 0.8), rgba(167, 185, 231, 0.8));
     color: white;
-    padding: 80px 0;
+    padding: 80px 10px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 6vw; 
     margin: 0;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 4vw;
     margin-top: 10px;
 }
 
@@ -40,31 +40,33 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 5px 15px;
 }
 
 nav ul li a {
     color: #4A90E2;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 4vw;
 }
 
 section {
     padding: 60px 20px;
     margin: 40px auto;
-    max-width: 800px;
+    max-width: 90%;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 5vw; 
     color: #4A90E2;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .about-details,
@@ -74,6 +76,8 @@ h2 {
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
+    font-size: 3.8vw; 
+    line-height: 1.8;
 }
 
 .interest-item {
@@ -88,7 +92,7 @@ h2 {
 }
 
 .icon {
-    font-size: 2rem;
+    font-size: 6vw;
     margin-right: 15px;
     color: #4A90E2;
 }
@@ -103,7 +107,7 @@ h2 {
 
 @media only screen and (max-width: 768px) {
     section {
-        padding: 40px 15px;
+        padding: 40px 10px;
     }
 
     .interest-item {
@@ -122,25 +126,43 @@ h2 {
     nav ul li {
         margin: 10px 0;
     }
+
+    .about-details,
+    .tools-list,
+    .interests-list {
+        font-size: 4.2vw;
+    }
 }
 
 @media only screen and (max-width: 480px) {
+    header {
+        padding: 60px 10px;
+    }
+
     header h1 {
-        font-size: 1.8rem;
+        font-size: 7vw;
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 5vw;
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 6vw;
+    }
+
+    nav ul li a {
+        font-size: 4.5vw;
     }
 
     .about-details,
     .tools-list,
     .interests-list {
         padding: 10px;
-        font-size: 0.9rem;
+        font-size: 4.5vw;
+    }
+
+    .interest-item {
+        padding: 10px;
     }
 }
