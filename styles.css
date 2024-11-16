@@ -236,3 +236,81 @@ html {
     scroll-behavior: smooth;
 }
 
+.dark-mode-toggle {
+  display: none;
+}
+
+.dark-mode-label {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #4A90E2;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transition: color 0.3s ease;
+}
+
+.dark-mode-label:hover {
+  color: #ffffff;
+}
+
+.dark-mode-toggle:checked + .dark-mode-label .icon {
+  color: #f1f1f1;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode header {
+  background: linear-gradient(135deg, rgba(50, 50, 50, 0.8), rgba(70, 70, 70, 0.8));
+}
+
+body.dark-mode section {
+  background-color: #1e1e1e;
+  color: #ccc;
+}
+
+body.dark-mode nav {
+  background-color: #333;
+}
+
+body.dark-mode footer {
+  background-color: #333;
+  color: #f1f1f1;
+}
+
+body.dark-mode .interest-item {
+  background: #444;
+}
+
+body.dark-mode h2 {
+  color: #4A90E2;
+}
+
+body.dark-mode .about-details,
+body.dark-mode .tools-list,
+body.dark-mode .interests-list {
+  background-color: #333;
+  color: #ccc;
+}
+
+body.dark-mode nav ul li a {
+  color: #4A90E2;
+}
+
+body.dark-mode nav ul li a:hover {
+  background-color: #4A90E2;
+  color: #fff;
+}
+
+body.dark-mode .popup-content {
+  background-color: #444;
+}
+
+.dark-mode-toggle:checked ~ body {
+  background-color: #121212;
+}
