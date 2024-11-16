@@ -121,20 +121,43 @@ ul li {
     line-height: 1.8;
     color: #555;
     margin: 20px auto;
-    max-width: 600px;
+    max-width: 800px;
     background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.interests-list p {
-    margin: 10px 0;
+.interest-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.interests-list strong {
-    color: #333;
+.interest-item:hover {
+    transform: translateX(10px);
 }
+
+.icon {
+    font-size: 2rem;
+    margin-right: 20px;
+    color: #4A90E2;
+}
+
+.interest-item p {
+    margin: 0;
+}
+
+.interest-item strong {
+    color: #333;
+    font-weight: 600;
+}
+
 
 
 
