@@ -36,35 +36,35 @@
 <section id="interests">
     <h2>My Interests</h2>
     <div class="interests-list">
-        <div class="interest-item">
+        <div class="interest-item" onclick="togglePopup('horror-movies')">
             <span class="icon">&#x1F3A5;</span>
             <p><strong>Horror Movies:</strong> I enjoy watching horror movies, especially when they have a good plot and unexpected twists.</p>
             <div class="popup-content">
                 <p>Some movies or series that i find interesting: The Conjuring, A Quiet Place, Stranger Things</p>
             </div>
         </div>
-        <div class="interest-item">
+        <div class="interest-item" onclick="togglePopup('gaming')">
             <span class="icon">&#x1F3AE;</span>
             <p><strong>Gaming:</strong> Gaming is one of my favorite hobbies, from action games to puzzle games.</p>
             <div class="popup-content">
                 <p>Games I played and my highest rank: MLBB (104 stars), Call of Duty: Mobile (Legendary), Chess (1635elo).</p>
             </div>
         </div>
-        <div class="interest-item">
+        <div class="interest-item" onclick="togglePopup('reading')">
             <span class="icon">&#x1F4D6;</span>
             <p><strong>Reading:</strong> I love reading books, whether it's fiction, non-fiction, or fantasy.</p>
             <div class="popup-content">
                 <p>Books I recommend: Harry Potter, The Hobbit, 1984.</p>
             </div>
         </div>
-        <div class="interest-item">
+        <div class="interest-item" onclick="togglePopup('math')">
             <span class="icon">&#x1F4D1;</span>
             <p><strong>Math Problems:</strong> Solving math problems is something I love to do when the topic sparks my interest.</p>
             <div class="popup-content">
                 <p>Favorite problems: Solving limits, complex arithmetics, Algebra puzzles.</p>
             </div>
         </div>
-        <div class="interest-item">
+        <div class="interest-item" onclick="togglePopup('swimming')">
             <span class="icon">&#x1F3CA;</span>
             <p><strong>Swimming:</strong> I like to swim, though I don't do it as much as I used to.</p>
             <div class="popup-content">
@@ -73,7 +73,6 @@
         </div>
     </div>
 </section>
-
 
 <section id="tools">
     <h2>Tools used for the site</h2>
@@ -87,60 +86,21 @@
     </div>
 </section>
 
-<div id="interest-popup" class="modal">
-    <div class="modal-content">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <h2 id="popup-title">Interest Title</h2>
-        <p id="popup-description">Detailed information will be shown here.</p>
-    </div>
-</div>
-
 <script>
-    function showInterestDetail(interest) {
-        const popup = document.getElementById('interest-popup');
-        const title = document.getElementById('popup-title');
-        const description = document.getElementById('popup-description');
-        
-        if (interest === 'horror-movies') {
-            title.innerText = 'Horror Movies';
-            description.innerText = 'I enjoy watching horror movies, especially when they have a good plot and unexpected twists.';
-        } else if (interest === 'gaming') {
-            title.innerText = 'Gaming';
-            description.innerText = 'Gaming is one of my favorite hobbies, from action games to puzzle games.';
-        } else if (interest === 'reading') {
-            title.innerText = 'Reading';
-            description.innerText = 'I love reading books, whether it\'s fiction, non-fiction, or fantasy.';
-        } else if (interest === 'math') {
-            title.innerText = 'Math Problems';
-            description.innerText = 'Solving math problems is something I love to do when the topic sparks my interest.';
-        } else if (interest === 'swimming') {
-            title.innerText = 'Swimming';
-            description.innerText = 'I like to swim, though I don\'t do it as much as I used to.';
-        }
-
-        popup.style.display = 'block';
+    function togglePopup(interest) {
+        const items = document.querySelectorAll('.interest-item');
+        items.forEach(item => {
+            const popupContent = item.querySelector('.popup-content');
+            if (item.classList.contains(interest)) {
+                popupContent.classList.toggle('open');
+                item.classList.toggle('open');
+            } else {
+                item.classList.remove('open');
+                popupContent.classList.remove('open');
+            }
+        });
     }
-
-    function closePopup() {
-        const popup = document.getElementById('interest-popup');
-        popup.style.display = 'none';
-    }
-
-    window.addEventListener('click', function(event) {
-        const popup = document.getElementById('interest-popup');
-        if (event.target === popup) {
-            popup.style.display = 'none';
-        }
-    });
 </script>
 
-document.querySelectorAll('.interest-item').forEach(item => {
-    item.addEventListener('click', function() {
-        this.classList.toggle('open');
-    });
-});
-
-
-    
 </body>
 </html>
