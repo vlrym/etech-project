@@ -118,8 +118,15 @@
         document.getElementById('dark-mode-toggle').addEventListener('click', toggleDarkMode);
     
     function togglePopup(element) {
-        element.classList.toggle('open');
-    }
+    const allPopups = document.querySelectorAll('.interest-item');
+    allPopups.forEach(item => {
+        if (item !== element) {
+            item.classList.remove('open');
+        }
+    });
+    element.classList.toggle('open');
+}
+
 </script>
 
 </body>
