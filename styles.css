@@ -111,22 +111,27 @@ ul li {
 }
 
 
-.skills-bar {
-    width: 100%;
-    max-width: 600px;
+.interests-list {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
     margin: 20px auto;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.skill {
-    background-color: #4A90E2;
-    height: 25px;
-    margin: 5px 0;
-    color: white;
-    text-align: center;
-    line-height: 25px;
-    font-size: 1rem;
-    border-radius: 10px;
+.interests-list p {
+    margin: 10px 0;
 }
+
+.interests-list strong {
+    color: #333;
+}
+
 
 
 section {
