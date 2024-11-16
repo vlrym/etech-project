@@ -89,6 +89,28 @@ ul li {
     margin: 8px;
 }
 
+.about-details {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-details p {
+    margin: 10px 0;
+}
+
+.about-details strong {
+    color: #333;
+}
+
+
 .skills-bar {
     width: 100%;
     max-width: 600px;
@@ -106,11 +128,11 @@ ul li {
     border-radius: 10px;
 }
 
-/* Adjusted Spacing and Layout */
+
 section {
-    padding: 60px 20px; /* Reduced padding */
-    margin: 40px auto; /* Adjusted margin for balance */
-    max-width: 800px; /* Constrain width for cleaner look */
+    padding: 60px 20px;
+    margin: 40px auto;
+    max-width: 800px;
     background-color: #ffffff;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
