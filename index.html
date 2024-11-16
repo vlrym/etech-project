@@ -86,12 +86,19 @@
     </div>
 </section>
 
+/*
 <script>
     function togglePopup(element) {
         const popupContent = element.querySelector('.popup-content');
         popupContent.classList.toggle('open');
     }
 </script>
+*/
+    document.querySelectorAll('.interest-item').forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('open');
+    });
+});
 
 </body>
 </html>
