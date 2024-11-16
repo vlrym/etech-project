@@ -89,6 +89,57 @@ ul li {
     margin: 8px;
 }
 
+.skills-bar {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.skill {
+    background-color: #4A90E2;
+    height: 25px;
+    margin: 5px 0;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    font-size: 1rem;
+    border-radius: 10px;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    color: #333;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.portfolio-item a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #4A90E2;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.portfolio-item a:hover {
+    color: #4CAF50;
+}
+
 footer {
     background-color: #333;
     color: white;
@@ -145,18 +196,16 @@ html {
 
 @media only screen and (max-width: 480px) {
     header h1 {
-        font-size: 1.8rem;
-    }
-
+        font-size: 1.8rem; }
     header p {
-        font-size: 1rem;
-    }
+    font-size: 1rem;
+}
 
-    nav ul li a {
-        font-size: 1rem;
-    }
+nav ul li a {
+    font-size: 1rem;
+}
 
-    h2 {
-        font-size: 1.6rem;
-    }
+h2 {
+    font-size: 1.6rem;
+}
 }
