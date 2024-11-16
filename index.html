@@ -97,6 +97,27 @@
 <input type="checkbox" id="dark-mode-toggle" class="dark-mode-toggle" />
 
 <script>
+    window.onload = function() {
+        if (localStorage.getItem('dark-mode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            document.getElementById('dark-mode-toggle').checked = true;
+        } else {
+            document.body.classList.remove('dark-mode');
+            document.getElementById('dark-mode-toggle').checked = false;
+        }
+    };
+
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    }
+
+    document.getElementById('dark-mode-toggle').addEventListener('change', toggleDarkMode);
+
     function togglePopup(element) {
         element.classList.toggle('open');
     }
