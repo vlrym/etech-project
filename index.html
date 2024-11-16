@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etech project</title>
+    <title>Etech Project</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -86,9 +86,28 @@
     </div>
 </section>
 
+<div class="popup-overlay" onclick="closeAllPopups()"></div>
+
 <script>
     function togglePopup(element) {
-        element.classList.toggle('open');
+        const popupContent = element.querySelector('.popup-content');
+        const overlay = document.querySelector('.popup-overlay');
+        if (!popupContent.classList.contains('open')) {
+            closeAllPopups();
+            popupContent.classList.add('open');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        } else {
+            closeAllPopups();
+        }
+    }
+
+    function closeAllPopups() {
+        const allPopups = document.querySelectorAll('.popup-content.open');
+        const overlay = document.querySelector('.popup-overlay');
+        allPopups.forEach(popup => popup.classList.remove('open'));
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
     }
 </script>
 
