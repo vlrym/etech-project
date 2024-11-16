@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Etech Project</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Etech project</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,13 +13,13 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Me</a></li>
         <li><a href="#interests">My Interests</a></li>
-        <li><a href="#tools">Tools</a></li>
+        <li><a href="#tools">Misc</a></li>
     </ul>
 </nav>
 
 <header id="home">
-    <h1>Welcome to My Page!</h1>
-    <p>Get to know more about me and my interests!</p>
+    <h1>Welcome to Myself!</h1>
+    <p>Learn more about me, and my interests</p>
 </header>
 
 <section id="about">
@@ -29,73 +28,94 @@
         <p><strong>Name:</strong> Edsan Sanchez</p>
         <p><strong>Age:</strong> 16 </p>
         <p><strong>School:</strong> Timber City Academy</p>
-        <p><strong>Birthday:</strong> June 9, 2008</p>
-        <p><strong>Goals:</strong> To pass this project and learn more about web development.</p>
+        <p><strong>Birthday:</strong> June 9, 2008 (06/09/2008) </p>
+        <p><strong>Goals:</strong> to pass this project</p>
     </div>
 </section>
 
 <section id="interests">
     <h2>My Interests</h2>
     <div class="interests-list">
-        <div class="interest-item">
+        <div class="interest-item" onclick="showInterestDetail('horror-movies')">
             <span class="icon">&#x1F3A5;</span>
-            <p><strong>Horror Movies:</strong> I enjoy watching horror movies, especially with a good plot.</p>
+            <p><strong>Horror Movies:</strong> I enjoy watching horror movies, especially when they have a good plot and unexpected twists.</p>
         </div>
-        <div class="interest-item">
+        <div class="interest-item" onclick="showInterestDetail('gaming')">
             <span class="icon">&#x1F3AE;</span>
-            <p><strong>Gaming:</strong> Gaming is a favorite pastime, from action games to puzzle games.</p>
+            <p><strong>Gaming:</strong> Gaming is one of my favorite hobbies, from action games to puzzle games.</p>
         </div>
-        <div class="interest-item">
+        <div class="interest-item" onclick="showInterestDetail('reading')">
             <span class="icon">&#x1F4D6;</span>
-            <p><strong>Reading:</strong> I love reading books, especially in fantasy and mystery genres.</p>
+            <p><strong>Reading:</strong> I love reading books, whether it's fiction, non-fiction, or fantasy.</p>
         </div>
-        <div class="interest-item">
+        <div class="interest-item" onclick="showInterestDetail('math')">
             <span class="icon">&#x1F4D1;</span>
-            <p><strong>Math Problems:</strong> Solving math problems when the topic interests me.</p>
+            <p><strong>Math Problems:</strong> Solving math problems is something I love to do when the topic sparks my interest.</p>
         </div>
-        <div class="interest-item">
+        <div class="interest-item" onclick="showInterestDetail('swimming')">
             <span class="icon">&#x1F3CA;</span>
-            <p><strong>Swimming:</strong> I like to swim, although not as often as I used to.</p>
+            <p><strong>Swimming:</strong> I like to swim, though I don't do it as much as I used to.</p>
         </div>
     </div>
 </section>
 
 <section id="tools">
-    <h2>Tools Used for the Site</h2>
+    <h2>Tools used for the site</h2>
     <div class="tools-list">
-        <p><strong>HTML:</strong> Structured the content.</p>
-        <p><strong>CSS:</strong> Styled the website for a clean, modern look.</p>
-        <p><strong>GitHub Pages:</strong> Hosted the website online.</p>
-        <p><strong>Visual Studio Code:</strong> A powerful code editor for development.</p>
-        <p><strong>Google Fonts:</strong> Custom fonts for better typography.</p>
-        <p><strong>Font Awesome:</strong> Used for icons and visual elements.</p>
+        <p><strong>HTML:</strong> Used to structure the content and layout of the site.</p>
+        <p><strong>CSS:</strong> Styled the website for a modern, clean design.</p>
+        <p><strong>GitHub Pages:</strong> Hosted the website for free and easy deployment.</p>
+        <p><strong>Visual Studio Code:</strong> A powerful code editor used for development.</p>
+        <p><strong>Google Fonts:</strong> Utilized for custom fonts to enhance the design.</p>
+        <p><strong>Font Awesome:</strong> Used for icons and other visual elements.</p>
     </div>
 </section>
 
-<footer>
-    <p>Contact me at <a href="mailto:edsansanchez@gmail.com">edsansanchez@gmail.com</a></p>
-</footer>
+<div id="interest-popup" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 id="popup-title">Interest Title</h2>
+        <p id="popup-description">Detailed information will be shown here.</p>
+    </div>
+</div>
 
 <script>
-    window.addEventListener("load", function() {
-        document.body.classList.add("fade-in");
-    });
+    function showInterestDetail(interest) {
+        const popup = document.getElementById('interest-popup');
+        const title = document.getElementById('popup-title');
+        const description = document.getElementById('popup-description');
+        
+        if (interest === 'horror-movies') {
+            title.innerText = 'Horror Movies';
+            description.innerText = 'I enjoy watching horror movies, especially when they have a good plot and unexpected twists.';
+        } else if (interest === 'gaming') {
+            title.innerText = 'Gaming';
+            description.innerText = 'Gaming is one of my favorite hobbies, from action games to puzzle games.';
+        } else if (interest === 'reading') {
+            title.innerText = 'Reading';
+            description.innerText = 'I love reading books, whether it\'s fiction, non-fiction, or fantasy.';
+        } else if (interest === 'math') {
+            title.innerText = 'Math Problems';
+            description.innerText = 'Solving math problems is something I love to do when the topic sparks my interest.';
+        } else if (interest === 'swimming') {
+            title.innerText = 'Swimming';
+            description.innerText = 'I like to swim, though I don\'t do it as much as I used to.';
+        }
 
-    const style = document.createElement('style');
-    style.innerHTML = `
-        body.fade-in {
-            animation: fadeIn 1s ease-out;
+        popup.style.display = 'block';
+    }
+
+    function closePopup() {
+        const popup = document.getElementById('interest-popup');
+        popup.style.display = 'none';
+    }
+
+    window.addEventListener('click', function(event) {
+        const popup = document.getElementById('interest-popup');
+        if (event.target === popup) {
+            popup.style.display = 'none';
         }
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    `;
-    document.head.appendChild(style);
+    });
 </script>
 
 </body>
