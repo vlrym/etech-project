@@ -118,5 +118,12 @@
     });
 </script>
 
+document.querySelectorAll('.interest-item').forEach(item => {
+    item.addEventListener('click', function() {
+        this.classList.toggle('open');
+    });
+});
+
+    
 </body>
 </html>
